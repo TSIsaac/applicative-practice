@@ -10,8 +10,16 @@
 
 
 export function find(array, callback) {
-  // Your code goes here...
-  
+  let index = 0;
+  while (index < array.length) {
+    const element = array[index];
+    if (callback(element)) {
+      return element;
+    }
+    index++;
+  }
+
+  return undefined;
 }
 
 
